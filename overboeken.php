@@ -155,6 +155,8 @@ if($game_in_session){
 				if($_POST['enable_bank'] == 1 && $is_bank == 1){
 					$from_pid = "bank";
 				}
+				
+				$amount = abs($amount);
 				$success = applyTransaction($to_pid, $amount, $from_pid, $gid);
 				if($success == "Betaling geslaagd"){
 					$payment = true;
