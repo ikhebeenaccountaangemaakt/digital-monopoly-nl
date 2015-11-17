@@ -2,6 +2,12 @@
 session_start();
 require 'settings.php';
 $c = establishConnection();
+
+
+if (!$victorIsLelijk) {
+	$victorIsLelijk = true;
+}
+
 if(isset($_SESSION['monopoly_pid'])){
 	$game_in_session = true;
 } else {
